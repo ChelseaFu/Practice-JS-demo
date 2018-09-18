@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload=function()
+        {
+            var oBtn1=document.getElementById('btn1');
+            var oBtn2=document.getElementById('btn2');
+            var oBtn3=document.getElementById('btn3');
+            var Check=document.getElementById('check1');
+            var oCheck=Check.getElementsByTagName('input');
+
+            oBtn1.onclick=function()
+            {
+                for(var i=0;i<oCheck.length;i++)
+                {
+                    oCheck[i].checked=true;
+                }
+            };
+            oBtn2.onclick=function()
+            {
+                for(var i=0;i<oCheck.length;i++)
+                {
+                    oCheck[i].checked=false;
+                }
+            };
+            oBtn3.onclick=function()
+            {
+                for(var i=0;i<oCheck.length;i++)
+                {
+                    if(oCheck[i].checked==true)
+                    {
+                        oCheck[i].checked=false;
+                    }
+                    else
+                    {
+                        oCheck[i].checked=true;
+                    }
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+    <input  id="btn1" type="button" value="全选" /> <br/>
+    <input  id="btn2" type="button" value="不选" /> <br/>
+    <input  id="btn3" type="button" value="反选" /> <br/>
+    <div id="check1">
+        <input type="checkbox" /><br/> 
+        <input type="checkbox" /><br/> 
+        <input type="checkbox" /><br/> 
+        <input type="checkbox" /><br/> 
+        <input type="checkbox" /><br/> 
+        <input type="checkbox" /><br/> 
+        <input type="checkbox" /><br/> 
+        <input type="checkbox" /><br/> 
+        <input type="checkbox" /><br/> 
+        <input type="checkbox" /><br/> 
+        <input type="checkbox" /><br/> 
+        <input type="checkbox" /><br/> 
+
+    </div>
+    
+</body>
+</html>

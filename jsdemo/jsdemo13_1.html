@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // window.onload=function()
+        // {
+        //    var oTab=document.getElementById('tab1');
+        //    var oldColor='';
+
+        //    for(var i=0;i<oTab.tBodies[0].rows.length;i++) 
+        //    {
+        //        oTab.tBodies[0].rows[i].onmouseover=function()
+        //        {
+        //            oldColor=this.style.background;
+        //            this.style.background='yellowgreen';
+        //        };
+        //        oTab.tBodies[0].rows[i].onmouseout=function()
+        //        {
+        //            this.style.background=oldColor;
+        //        };
+        //        if(i%2)
+        //        {
+        //            oTab.tBodies[0].rows[i].style.background='';
+        //        }
+        //        else
+        //        {
+        //            oTab.tBodies[0].rows[i].style.background='#ccc';
+        //        }
+        //    }
+        // };
+        window.onload=function()
+        {       
+            var oTab=document.getElementById('tab1');
+            var oBtn=document.getElementById('btn1');
+            var oName=document.getElementById('name');
+            var oAge=document.getElementById('age');
+            
+            oBtn.onclick=function()
+            {
+                var oTr=document.createElement('tr');
+                
+                var oTd=document.createElement('td');
+                oTd.innerHTML=oTab.tBodies[0].rows.length+1;//?
+                oTr.appendChild(oTd);
+                
+                var oTd=document.createElement('td');
+                oTd.innerHTML=oName.value;
+                oTr.appendChild(oTd);
+                
+                var oTd = document.createElement('td');
+                oTd.innerHTML = oAge.value
+                oTr.appendChild(oTd);
+                oTab.tBodies[0].appendChild(oTr);
+            };
+        };
+    </script>
+</head>
+<body>
+    姓名
+    <input id="name" type="text" />年龄：
+    <input id="age" type="text" />
+    <input id="btn1" type="button" value="添加" />
+    <table id="tab1" border="1" width="500">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>姓名</td>
+                <td>年龄</td>
+            </tr>
+        </thead>
+        <tbody>
+           <tr>
+               <td>1</td>
+               <td>Blue</td>
+               <td>27</td>
+           </tr> 
+           <tr>
+               <td>2</td>
+               <td>FJSSSJON</td>
+               <td>43</td>
+           </tr>
+           <tr>
+                <td>3</td>
+                <td>SDYCFUVG</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>KJHGF</td>
+                <td>33</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>ERTFSDCDS</td>
+                <td>88</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

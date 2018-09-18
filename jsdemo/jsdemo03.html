@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1{
+            width:200px;
+            height:200px;
+            background: black;
+        }
+        #div2{
+            width:200px;
+            height:300px;
+            background: #cccccc;
+        }
+    </style>
+    <script>
+        // function toGreen()
+        // {
+        //     var oDiv=document.getElementById('div1');
+        //     oDiv.style.background='green';
+        // }
+        // function toRed()
+        // {
+        //     var oDiv=document.getElementById('div1');
+        //     oDiv.style.background='red';
+        // }
+        // function toYellow()
+        // {
+        //     var oDiv=document.getElementById('div1');
+        //     oDiv.style.background='yellow';
+        // }
+        function setColor(name,value){
+            var oDiv=document.getElementById('div1');
+            oDiv.style[name]=value;
+        }
+
+        function toRed()
+        {
+            var oDiv=document.getElementById('div2');
+            oDiv.style.background='red';
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="变宽" onclick="setColor('width','500px');"/>
+    <input type="button" value="变红" onclick="setColor('background','red');"/>
+    <input type="button" value="变黄" onclick="setColor('background','yellow');"/>
+    <div id="div1">
+    </div>
+    <br/>
+    <input type="button" value="变红" onclick="toRed()"/>
+    <div id="div2">
+    </div>
+</body>
+</html>

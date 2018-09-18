@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+body{
+    margin:0
+}
+
+.icon-bar{
+
+    width:100%;
+    background-color: indianred;
+    overflow: auto;
+}
+
+.icon-bar a{
+    /*display:block;*/
+    text-align: center;
+    float:left;
+    width:18%;
+    padding:20px 12.58px;
+    transition: all 0.3s ease;
+    color: lightpink;
+    font-size: 36px;
+
+}
+.icon-bar a:hover{
+    background-color: white;
+}
+
+.bar{
+    width:90px;
+    background-color: peachpuff;
+}
+
+.bar a{
+    display:block;
+    text-align:center;
+    padding:20px;
+    transition: all 0.3s ease;
+    color: orange;
+    font-size: 36px;
+}
+.bar a:hover{
+    background-color: white;
+}
+
+.active{
+    background-color: mediumorchid;
+}
+
+.switch{
+    background-color: chocolate;
+}
+
+</style>
+
+
+<body>
+<div class="icon-bar">
+    <a class="active" href="#">
+        <i class="fa fa-home"></i>
+    </a>
+
+    <a href="#">
+        <i class="fa fa-search"></i>
+    </a>
+
+    <a href="#">
+        <i class="fa fa-envelope"></i>
+    </a>
+
+    <a href="#">
+        <i class="fa fa-globe"></i>
+    </a>
+
+    <a href="#">
+        <i class="fa fa-trash"></i>
+    </a>
+</div>
+
+<div class="bar">
+    <a class="switch" href="@">
+        <i class="fa fa-align-left"></i>
+    </a>
+
+    <a href="@">
+        <i class="fa fa-angle-double-down"></i>
+    </a>
+
+    <a href="@">
+        <i class="fa fa-calendar"></i>
+    </a>
+
+</div>
+
+</body>
+</html>
